@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage[none]{hyphenat}
+\usepackage{enumitem}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{circuitikz}
+\usepackage{listings}
+\usepackage{./karnaugh-map}
+\usetikzlibrary{arrows,shapes,automata,petri,positioning,calc}
+\usetikzlibrary{shapes.geometric}
+\lstset{
+	language=C++,
+	basicstyle=\ttfamily\footnotesize,
+	breaklines=true,
+	frame=lines
+	}
+\title{Implementation of finite state machine}
+\date{March 2023}
+\author{M Sai Sarath Chandra\\chandu.4567890@gmail.com\\FWC22117\\IIT Hyderabad-Future Wireless Communication Assignment}
+
+\begin{document}
+\maketitle
+	\tableofcontents
+
+\pagebreak
+\section{Problem}
+	{GATE EC-2020}\\
+	Q.39. The state diagram of a sequence detector is shown below.State S0 is the initial state of the seuence detector.If the output is 1,then 
+\\
+\begin{figure}[h]
+	\centering
+\input{figs/fig1.tex}
+	\caption{FSM}
+	\label{fig:1}
+\end{figure}
+\\
+\begin{enumerate}
+	\item the sequence 01010 is detected.
+	\item the sequence 01011 is detected.
+	\item the sequence 01110 is detected.
+	\item the sequence 01001 is detected.
+\end{enumerate}
+
+\section{Introduction}
+		The aim is to implement the above finite state machine using 7447 and 7474 IC's.Finite state machine is a device which stores a state at a given time,the state will then change based on inputs,provding the resulting output for the implemented changes.IC 7474 is a dual positive-edge-triggered D-type flip flop,which means it has two separate flip-flop that are triggered by the rising edge of a clock signal.
+
+\section{Components}
+	\begin{table}[h]
+		\begin{center}
+			\input{tables/table1.tex}
+			\caption{Components}
+			\label{table:1}
+		\end{center}
+	\end{table}
+\pagebreak
+
+\section{Hardware}
+	The IC 7474 is a type of flip-flop integrated circuit that is commonly used in digital electronics applications.It is a dual positive-edge-triggered by
+	\begin{figure}[h]
+		\centering
+		\input{figs/fig2.tex}
+			\caption{7474}
+			\label{fig:2}
+		\end{figure}
+
+The connections between arduino and two 7474 IC's and one 7447 IC is:
+	\begin{table}[h]
+		\begin{center}
+	\input{tables/table2.tex}
+			\caption{Arduino-7474}
+			\label{table:1}
+	\end{center}
+	\end{table}
+
+The transition table of the finite state machine is given in the below table \\
+\pagebreak
+	\begin{table}[h]
+	\begin{center}
+		\input{tables/table3.tex}
+		\caption{Truth table}
+		\label{table:3}
+	\end{center}
+	\end{table}
+
+
+K-map for A is \\
+\begin{figure}[h]
+		\centering
+		\input{figs/fig3.tex}
+		\caption{kmap}
+		\label{fig:3}
+\end{figure}
+
+
+The resultant expression for $A$ is $ A = YZI $.\\
+
+\pagebreak
+
+K-map for B is \\
+\begin{figure}[h]
+	\centering
+	\input{figs/fig4.tex}
+	\caption{kmap}
+	\label{fig:4}
+\end{figure}
+
+The resultant expression for $B$ is $ B = YZ'I'+Y'ZI+XI' $.\\
+
+K-map for C is \\
+\begin{figure}[h]
+	\centering
+	\input{figs/fig5.tex}
+	\caption{kmap}
+	\label{fig:5}
+\end{figure}
+
+The resultant expression for $C$ is $ C = I' $.\\
+
+K-map for D is \\
+\begin{figure}[h]
+	\centering
+	\input{figs/fig6.tex}
+	\caption{kmap}
+	\label{fig:6}
+\end{figure}
+
+The resultant expression for $D$ is $ D = XI' $.\\
+
+\section{Software}
+
+The assembly code to implement the above finite state machine is: \\
+		\lstinputlisting{assignment.asm}
+\end{document}
