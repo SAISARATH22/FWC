@@ -1,5 +1,0 @@
-\contentsline {section}{\numberline {1}Problem}{2}{}%
-\contentsline {section}{\numberline {2}Introduction}{2}{}%
-\contentsline {section}{\numberline {3}Components}{3}{}%
-\contentsline {section}{\numberline {4}Hardware}{3}{}%
-\contentsline {section}{\numberline {5}Software}{4}{}%
