@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[none]{hyphenat}
+\usepackage{enumitem}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{circuitikz}
+\usepackage{listings}
+\usetikzlibrary{shapes.geometric}
+\lstset{
+	language=C++,
+	basicstyle=\ttfamily\footnotesize,
+	breaklines=true,
+	frame=lines
+	}
+\title{Implementation of the below circuit using avr-gcc}
+\date{March 2023}
+\author{M Sai Sarath Chandra\\chandu.4567890@gmail.com\\FWC22117\\IIT Hyderabad-Future Wireless Communication Assignment}
+
+\begin{document}
+\maketitle
+	\tableofcontents
+
+\pagebreak
+
+\section{Problem}
+	{GATE EC-2019}\\
+	Q.25. In the circuit shown,the clock frequency, i.e.,the frequency of the clock signal ,is 12 KHz.The frequency of the signal at Q2 is ............ KHz.
+	\begin{figure}[h]
+	\centering
+		\input{figs/fig1.tex}
+		\caption{circuit}
+		\label{fig:1}
+	\end{figure}
+
+\section{Introduction}
+		
+		The aim is to implement the above sequential circuit using D flip-flops (IC 7474) and to find out the frequency of the signal at Q2(it is given that the frequency of the clock signal is 12KHz).IC 7474 is a dual positive edge triggered D type flip flop,which means it has two separate flip-flop that are triggered by the rising edge of a clock signal.
+
+		In the above circuit $Q_1$,$Q_2$ are inputs and $D_1$,$D_2$ are outputs.So,from the circuit the expressions of $D_1$ and $D_2$ are:
+
+		$D_1 = Q_1'Q_2'$.\\
+			$D_2 = Q_1$.\\
+
+Below is the transition table of the above circuit which is as follows:
+\pagebreak
+
+	\begin{table}[h]
+		\begin{center}
+			\input{tables/table2.tex}
+			\caption{Transition table}
+			\label{table:2}
+		\end{center}
+	\end{table}
+
+\section{Components}
+	
+	\begin{table}[h]
+		\begin{center}
+			\input{tables/table1.tex}
+			\caption{Components}
+			\label{table:1}
+		\end{center}
+	\end{table}
+
+
+\section{Hardware}
+
+	IC 7474 is a D flip-flop integrated circuit that is commonly used in digital electronics applications.It is a dual positive edge-triggered by the rising edge of a clock signal.Below is the pin diagram of IC 7474:
+	\begin{figure}[h]
+		\centering
+		\input{figs/fig2.tex}
+		\caption{7474}
+		\label{fig:2}
+	\end{figure}
+
+
+The connections between the arduino and IC 7474 is as follows:
+	\begin{table}[h]
+		\begin{center}
+			\input{tables/table3.tex}
+			\caption{connections}
+			\label{table:3}
+		\end{center}
+	\end{table}
+
+
+\section{Software}
+
+The code to implement the above circuit is : \\
+
+		\lstinputlisting{main.c}
+
+\end{document}
