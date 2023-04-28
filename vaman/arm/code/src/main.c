@@ -1,15 +1,3 @@
-/*==========================================================
-Code by G V V Sharma
-Apr 11, 2021,
-Released under GNU/GPL
-https://www.gnu.org/licenses/gpl-3.0.en.html
-/*==========================================================
- *
- *    File   : main.c
- *    Purpose: main for Pygmy incrementing decoder  using Boolean Logic
- *                                                          
- *=========================================================*/
-
 #include "Fw_global_config.h"   // This defines application specific charactersitics
 
 #include <stdio.h>
