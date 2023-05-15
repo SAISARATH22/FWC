@@ -1,0 +1,16 @@
+Netlist_File: assignment.net Netlist_ID: SHA256:7bc5af7b5744fb8a608a6e0277d0e0926c719c045c1af93c6c0cc30767825c1a
+Array size: 39 x 35 logic blocks
+
+#block name	x	y	subblk	block number
+#----------	--	--	------	------------
+in_LUT2_I0_1.t_frag	18	4	0	#0
+in_LUT2_I0.t_frag	21	7	0	#1
+$iopadmap$insss.a	16	3	0	#2
+$iopadmap$insss.b	18	3	0	#3
+$iopadmap$insss.c	20	3	0	#4
+$iopadmap$insss.d	22	3	0	#5
+in		14	3	0	#6
+a_dff_Q		16	7	0	#7
+clk		24	3	0	#8
+$false		3	1	0	#9
+$true		2	1	0	#10

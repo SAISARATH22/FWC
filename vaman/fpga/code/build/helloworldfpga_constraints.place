@@ -1,0 +1,7 @@
+X            14   3  0  # set_io X		64
+Y            16   3  0  # set_io Y		62
+Z            18   3  0  # set_io Z		63
+$iopadmap$helloworldfpga.optiona  24   3  0  # set_io optiona		59
+$iopadmap$helloworldfpga.optionb  26   3  0  # set_io optionb		57
+$iopadmap$helloworldfpga.optionc  28   3  0  # set_io optionc		56
+$iopadmap$helloworldfpga.optiond  30   3  0  # set_io optiond		55

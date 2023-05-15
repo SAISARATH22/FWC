@@ -1,0 +1,8 @@
+#Block Name x   y   z    pcf_line
+#----- --  --  -    ----
+clk    24   3  0  # set_io clk		59
+in     14   3  0  # set_io in		64
+$iopadmap$insss.a  16   3  0  # set_io a 		62
+$iopadmap$insss.b  18   3  0  # set_io b		63
+$iopadmap$insss.c  20   3  0  # set_io c 		61
+$iopadmap$insss.d  22   3  0  # set_io d 		60
