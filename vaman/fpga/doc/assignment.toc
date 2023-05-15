@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Problem}{2}{}%
+\contentsline {section}{\numberline {2}Introduction}{2}{}%
+\contentsline {section}{\numberline {3}Components}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Vaman}{2}{}%
+\contentsline {subsection}{\numberline {3.2}Seven Segment Display}{2}{}%
+\contentsline {section}{\numberline {4}Implementation}{3}{}%
+\contentsline {section}{\numberline {5}Software}{3}{}%

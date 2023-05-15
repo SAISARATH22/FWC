@@ -1,0 +1,87 @@
+\def\mytitle{CHECKING THE BELOW EQUATIONS IF THEY ARE TRUE\\ USING FPGA(VAMAN)}
+\def\mykeywords{}
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75    cm,bottom=1.5cm]{geometry}
+%  \twocolumn
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{circuitikz}
+\usepackage{tabularx}
+\usepackage{tikz}
+%\usepackage{geometry}
+%\usetikzlibrary{shapes,arrows,chains,decorations.markings,intersections,calc}
+\usetikzlibrary{positioning}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithm2e}
+\usepackage{karnaugh-map}                           
+\usepackage{datetime}
+\usepackage{amsmath}
+\usepackage{textgreek}
+\usepackage{tikz}
+\usetikzlibrary{calc}                         
+\usetikzlibrary{circuits.logic.US}
+\title{\mytitle}
+ \author{M Sai Sarath Chandra\\chandu.4567890@gmail.com\\FWC22117 IITH-Future Wireless Communications     Assignment-ARM}
+\date{}
+\sloppy
+\lstset{                                          
+language=C++,                           
+basicstyle=\ttfamily\footnotesize,   
+breaklines=true,                       
+frame=lines
+}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+\section{Problem}
+(GATE2019-QP-CS)\\
+Q.6. Which one of the following is NOT a valid identity?
+\begin{enumerate}
+\item $(x \oplus y) \oplus z = x \oplus (y \oplus z)$
+\item $(x + y) \oplus z = x \oplus (y + z)$
+\item $x \oplus y = x + y$,if $xy = 0$
+\item $x \oplus y = (xy +x'y')'$
+\end{enumerate}
+\section{Introduction}
+The above question can be answered by evaluating the expressions using the digital logic identities and properties,the following cases are evaluated using digital logics and properties:
+\begin{enumerate}
+\item $(x \oplus y) \oplus z = x \oplus (y \oplus z)$\newline
+Explanation:This option follows associative property of XOR,so this is TRUE for every value of x,y and z.
+\item $(x + y) \oplus z = x \oplus (y + z)$\newline
+Explanation:This is not a TRUE identity because this identity is not applicable for every value of x,y and z.
+\item $x \oplus y = x + y$,if $xy = 0$\newline
+Explanation:As $x \oplus y = (x'y + xy')$,so if x or y is considered to be 0 and after substituting in the equation it results in $x + y$.\newline
+Example: Let us consider $x=0$ and $y=1$,so for this case \newline
+$x \oplus y = (0)'1 + 0(1)' = (1)1 + 0(0) = 1 + 0 = 1.$(since (0)'=1,(1)'=0)\newline
+$x + y = 1 + 0 = 1$\newline
+Hence proved that this a TRUE identity.The same can be proved for the rest three cases.
+\item $x \oplus y = (xy +x'y')'$\newline
+Explanation:As $(xy + x'y') = (x \odot y)$ and the complement of $(x \odot y)' = (x \oplus y)$.\newline
+So,this is TRUE for all cases of $x$ and $y$.
+\end{enumerate}
+\section{Components}
+\begin{table}[h]
+\centering
+\input{tables/table1.tex}
+\caption{Components}
+\label{table:components}
+\end{table}
+\subsection{Vaman} 
+The Vaman (pygmy) has some ground pins, digital pins that can be used for both input as well as output.It also has two power pins that can generate 3.3V. In the following exercises, we use digital pins,GND and 5V .
+\subsection{Seven Segment Display}
+The seven segment display has eight pins, \emph{a,b,c,d,e,f,g} and \emph{dot} that take an active LOW input,i.e. the LED will glow only if the input is connected to ground.Each of these pins is connected to an LED segment.The \emph{dot} pin is reserved for the LED.
+\section{Implementation}
+The above problem can be implemented using vaman and led's by connecting both of them as mentioned below:
+\lstinputlisting{quickfeather.pcf}
+\section{Software}
+To implement the above code using arm the following code can be used to implement:
+\lstinputlisting{helloworldfpga.v}
+\end{document}
