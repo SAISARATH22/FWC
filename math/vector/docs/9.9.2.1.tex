@@ -43,47 +43,66 @@ The input co-ordinates of the above parallelogram are given in this table : \\
 \end{table}\\
 The rest of the co-ordinates were obtained in the following way : \\
 \begin{enumerate}
-\item Deriving the co-ordinates for E :\\
-	The length of DE gives the x co-ordinate of E and it is obtained in the following way : \\
-		\begin{align}
-		\tan{D} = \frac{AE}{DE} \\
-		DE = \cot{D} * AE\\
-		DE = \cot{38.68} * 8cm\\
-			(\frac{10}{8}) * 8cm = 10cm\\
-		\end{align}
-Therefore, the x-coordinate is 10.As, the point E is on the same line as that of D the y co-ordinate is 0.\\
-So, the co-ordinates of E are (10,0).
 \item Deriving the co-ordinates of A :\\
-	As A lies exactly above E the x co-ordinate of A is same as that of E which is 10.\\
-The length of AE gives the y co-ordinate of A which is 8.So, the co-ordinates of A are (10,8).
+	A can be expressed in terms of (r$\cos{\theta}$,r$\sin{\theta}$).\\
+To find out the value of r:\\
+		From $\triangle{ADE}$, r is AD and $\theta$ is D.\\
+		\begin{align}
+		\sin{\theta} = \frac{AE}{AD}\\
+		\implies \sin{\theta} = \frac{AE}{r}\\
+			r = \frac{AE}{\sin{\theta}}\\
+			r = \frac{8}{\sin{38.68}}\\
+			r = 12.8cm\\
+		\end{align}
+The x co-ordinate is expressed as r$\cos{\theta}$.\\
+		\begin{align}
+			A_x = r * \cos{\theta}\\
+			\implies (12.8) * (\cos{38.68}) = 10cm\\
+		\end{align}
+The y co-ordinate can be expressed as r$\sin{\theta}$.\\
+		\begin{align}
+			A_y = r * \sin{\theta}\\
+			\implies (12.8) * (\sin{38.68}) = 8cm\\
+		\end{align}
+So, the co-ordinates of A are (10,8).
+\item Deriving the co-ordinates for E :\\
+The co-ordinates of E can be derived using a$e_1$, where a is the length of DE.To find out the length of DE we have to do the following steps : \\
+		\begin{align}
+			DE = \cos{D} * (AD) (from \triangle{ADE})\\
+			DE = \cos{38.68} * (12.8) \\
+			DE = 10cm = a\\
+		\end{align}
+Now E can be expresed as a*$e_1$ which is equal to
+		\begin{center}
+			10\myvec{1\\0}\\
+			$\implies$\myvec{10\\0}\\
+		\end{center}
+So, the co-ordinates of E are (10,0).
 \item Deriving the co-ordinates of B : \\
 	The y co-ordinate of B is same as that of A because both the points are on the same horizontal line which is 8.\\
 In order to obtain the x co-ordinate :
 		\begin{align}
-			B_x = A_x + 16(because AB = 16cm)\\
+			B_x = A_x + 16(because \norm{\vec{AB}} = 16cm)\\
 			B_x = 10 +16 = 26.\\
 		\end{align}
 The co-ordinates of B are (26,8).\\
 \item Deriving the co-ordinates of F :\\
-Let us initially assume that the co-ordinates of F are (x,y).The co-ordinates of F are drived using distance formula for DF and CF and solving these equations,we get the co-ordinates of F.\\
-To find out length of DF : \\
+The co-ordinates of F can be derived by applying section formula : \\
+The value of m = 12.48 and n = 0.32 and m : n = 39 : 1.\\
+The co-ordinates of point D are cosidered to be ($x_1$,$y_1$) and co-ordinates of point A are considered to be ($x_2$,$y_2$).\\
+The x co-ordinate is obtained using, \\
 		\begin{align}
-			\cos{D} = \frac{DF}{DC} (from \triangle{DFC})\\
-			DF = \cos{D} * DC\\
-			DF = \cos{38.68} * 16\\
-			DF = 12.48cm\\
+			F_x = \frac{m(x_2) + n(x_1)}{m + n}\\
+			F_x = \frac{39(10) + 1(0)}{39 + 1}\\
+			\implies \frac{390}{40} = 9.75\\
 		\end{align}
-By applying distance formula between point D and point F, we get the following equation : \\
-			\begin{align}
-			x^2 + y^2 = 156
-			\label{eq:1}\\
-			\end{align}
-By applying the distance formula between point F and point C, we get te following equation :\\
+The y co-ordinate can be found out using, \\
 		\begin{align}
-			(x-16)^2 + y^2 = 100
-			\label{eq:2}\\
-			\end{align}
-By solving the above two equations, we get the co-ordinates of F which are (9.75,7.806).
+			F_y = \frac{m(y_2) + n(y_1)}{m + n}\\
+			F_y = \frac{39(8) + 1(0)}{39 + 1}\\
+			\implies \frac{312}{40} = 7.8 \\
+		\end{align}
+So, the co-ordinates of F are (9.75,7.8).
 \end{enumerate}
 \textbf{Solution}\\
 It is given that the length of $AB = 16cm$.So,\\
