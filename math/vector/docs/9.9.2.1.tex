@@ -43,66 +43,57 @@ The input co-ordinates of the above parallelogram are given in this table : \\
 \end{table}\\
 The rest of the co-ordinates were obtained in the following way : \\
 \begin{enumerate}
-\item Deriving the co-ordinates of A :\\
-	A can be expressed in terms of (r$\cos{\theta}$,r$\sin{\theta}$).\\
-To find out the value of r:\\
-		From $\triangle{ADE}$, r is AD and $\theta$ is D.\\
+\item \textbf{To find out the co-ordinates of F:} \\
+	Let equation of $\vec{AD}$ be \\
 		\begin{align}
-		\sin{\theta} = \frac{AE}{AD}\\
-		\implies \sin{\theta} = \frac{AE}{r}\\
-			r = \frac{AE}{\sin{\theta}}\\
-			r = \frac{8}{\sin{38.68}}\\
-			r = 12.8cm\\
+			\vec{n}^\top \vec{x} = c\\
 		\end{align}
-The x co-ordinate is expressed as r$\cos{\theta}$.\\
+Substituting point D in the above equation in place of x, we get c = 0.Now substituting point A in the above equation, we get : \\
 		\begin{align}
-			A_x = r * \cos{\theta}\\
-			\implies (12.8) * (\cos{38.68}) = 10cm\\
+			\vec{n}^\top \vec{A} = 0 \\
 		\end{align}
-The y co-ordinate can be expressed as r$\sin{\theta}$.\\
+As $\vec{CF}$ is normal to $\vec{AD}$, $\vec{n}$ = $\vec{CF}$ and as point F lies on $\vec{AB}$, the above equation can be written as \\
 		\begin{align}
-			A_y = r * \sin{\theta}\\
-			\implies (12.8) * (\sin{38.68}) = 8cm\\
+			(\vec{C} - \vec{F})^\top \vec{F} = 0\\
 		\end{align}
-So, the co-ordinates of A are (10,8).
-\item Deriving the co-ordinates for E :\\
-The co-ordinates of E can be derived using a$e_1$, where a is the length of DE.To find out the length of DE we have to do the following steps : \\
+As it is given that $\norm{\vec{C} - \vec{F}} = 10cm$.So, it can be written as \\
 		\begin{align}
-			DE = \cos{D} * (AD) (from \triangle{ADE})\\
-			DE = \cos{38.68} * (12.8) \\
-			DE = 10cm = a\\
+			(\vec{C} - \vec{F})^\top (\vec{C} - \vec{F}) = 100\\
+			\implies (\vec{C} - \vec{F})^\top \vec{C} = 100(because (\vec{C} - \vec{F})^\top \vec{C} = 0)\\
+			(\vec{C} - \vec{F})^\top \vec{C} = \norm{\vec{C}}^2 - \vec{F}^\top \vec{C} = 100\\
 		\end{align}
-Now E can be expresed as a*$e_1$ which is equal to
-		\begin{center}
-			10\myvec{1\\0}\\
-			$\implies$\myvec{10\\0}\\
-		\end{center}
-So, the co-ordinates of E are (10,0).
-\item Deriving the co-ordinates of B : \\
-	The y co-ordinate of B is same as that of A because both the points are on the same horizontal line which is 8.\\
-In order to obtain the x co-ordinate :
+So, $\vec{F}^\top$ $\vec{C} = 156$, which is \\
 		\begin{align}
-			B_x = A_x + 16(because \norm{\vec{AB}} = 16cm)\\
-			B_x = 10 +16 = 26.\\
+			\vec{F}^\top\myvec{16\\0} = 156\\
+			\vec{F} e_1 = \frac{156}{16}\\
+			F_x = 9.75\\
 		\end{align}
-The co-ordinates of B are (26,8).\\
-\item Deriving the co-ordinates of F :\\
-The co-ordinates of F can be derived by applying section formula : \\
-The value of m = 12.48 and n = 0.32 and m : n = 39 : 1.\\
-The co-ordinates of point D are cosidered to be ($x_1$,$y_1$) and co-ordinates of point A are considered to be ($x_2$,$y_2$).\\
-The x co-ordinate is obtained using, \\
+Based on above equations, $\vec{F}^\top \vec{F} = \vec{F}^\top \vec{C}$.So, it can be written as : \\
 		\begin{align}
-			F_x = \frac{m(x_2) + n(x_1)}{m + n}\\
-			F_x = \frac{39(10) + 1(0)}{39 + 1}\\
-			\implies \frac{390}{40} = 9.75\\
+			\vec{F}^\top \vec{F} = 156\\
+			\implies (\vec{F}^\top e_1)^2 + (\vec{F}^\top e_2)^2 = 156\\
+			\implies F_x^2 + F_y^2 = 156 \\
+			F_y^2 = 156 - (9.75)^2\\
+			\implies F_y = 7.806\\
 		\end{align}
-The y co-ordinate can be found out using, \\
+The co-ordinates of F are (9.75,7.806).
+\item \textbf{To find out the co-ordinates of A :}\\
+	The length of AE gives the y co-ordinate of A,which is 8.By substituting in the below equation we can get the x co-ordinate of A :\\
 		\begin{align}
-			F_y = \frac{m(y_2) + n(y_1)}{m + n}\\
-			F_y = \frac{39(8) + 1(0)}{39 + 1}\\
-			\implies \frac{312}{40} = 7.8 \\
+			(\vec{C} - \vec{F})^\top \vec{A} = 0\\
+			\myvec{6.25&-7.806}\myvec{x\\8} = 0\\
+			(6.25)x = 62.5\\
+			\implies x = 10.
 		\end{align}
-So, the co-ordinates of F are (9.75,7.8).
+The co-ordinates of A are (10,8).
+\item \textbf{To find out the co-ordinates of B :}\\
+	As B lies on the same horizontal line as that of A,the y co-ordinate of B is 8.In order to find out the x co-ordinate of B:\\
+		\begin{align}
+			As \norm{\vec{B} - \vec{A}} = 16\\
+			B_x = A_x + 16\\
+			B_x = 10 + 16 = 26\\
+		\end{align}
+		So, the co-ordinates of B are (26,8).
 \end{enumerate}
 \textbf{Solution}\\
 It is given that the length of $AB = 16cm$.So,\\
