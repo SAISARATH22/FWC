@@ -27,126 +27,77 @@ Q1. In the figure given below, $ABCD$ is a parallelogram, $AE \perp DC$ and $CF 
  \label{fig:Fig}
 \end{figure}\\
 \pagebreak
-The input parameters for the above construction are shown in the table below : \\
+The following table consists of given input parameters of the above parallelogram ABCD :\\
 \begin{table}[h]
-	\centering
+\centering
 	\input{tables/table1.tex}
 	\caption{Parameters}
 	\label{tab:table1}
 \end{table}\\
-The input co-ordinates of the above parallelogram are given in this table : \\
+Table below has the given input co-ordinates of the parallelogram :\\
 \begin{table}[h]
 	\centering
 	\input{tables/table2.tex}
 	\caption{Co-ordinates}
 	\label{tab:table2}
 \end{table}\\
-The rest of the co-ordinates were obtained in the following way : \\
+Rest of the point co-ordinates are derived in the following way : \\
 \begin{enumerate}
-\item \textbf{To find out the co-ordinates of F:} \\
-	Let equation of $\vec{AD}$ be \\
+	\item \textbf{To derive the co-ordinates of C :}\\
+		Let us assume that $\norm{\vec{D} - \vec{C}} = \vec{c}$.As it is given that $\norm{\vec{D} - \vec{C}} = 16$ and as point C lies on x axis, it can be expressed in the following way : \\
 		\begin{align}
-			\vec{n}^\top \vec{x} = c\\
+			\vec{C} = \vec{c}e_1\\
+			\implies (16)\myvec{1\\0}\\
+			\vec{C} = \myvec{16\\0}\\
 		\end{align}
-Substituting point D in the above equation in place of x, we get c = 0.Now substituting point A in the above equation, we get : \\
+	\item \textbf{To derive the co-ordinates of A :}\\
+		A can be expressed in the form of $r\myvec{\cos{\theta}\\\sin{\theta}}$.In order to obtain r and $\theta$, the following can be done : \\
+		To find out $\theta$,let us assume that $\norm{\vec{C} - \vec{F}} = \vec{a}$		
 		\begin{align}
-			\vec{n}^\top \vec{A} = 0 \\
+			from \triangle{CFD},\\
+			\sin{\theta} = \frac{\vec{a}}{\vec{c}}\\
+			\implies \sin{\theta} = \frac{10}{16}\\
+			\implies \sin^{-1}{\frac{10}{16}} = 38.68\degree\\
 		\end{align}
-As $\vec{CF}$ is normal to $\vec{AD}$, $\vec{n}$ = $\vec{CF}$ and as point F lies on $\vec{AB}$, the above equation can be written as \\
+		Let us consider $\norm{\vec{D} - \vec{A}} = \vec{r}$ and $\norm{\vec{E} - \vec{A}} = \vec{b}$.In order to find out $\vec{r}$,
 		\begin{align}
-			(\vec{C} - \vec{F})^\top \vec{F} = 0\\
+			from \triangle{ADE},\\
+			\sin{\theta} = \frac{\vec{b}}{\vec{r}}\\
+			\vec{r} = \frac{\vec{b}}{\sin{\theta}}\\
+			\vec{r} = \frac{8}{\sin{\theta}}\\
+			\implies \frac{8}{\frac{5}{8}}\\
+			\vec{r} = 12.8\\
 		\end{align}
-As it is given that $\norm{\vec{C} - \vec{F}} = 10cm$.So, it can be written as \\
+		So, the co-ordinates of $\vec{A}$ can be written as :\\
 		\begin{align}
-			(\vec{C} - \vec{F})^\top (\vec{C} - \vec{F}) = 100\\
-			\implies (\vec{C} - \vec{F})^\top \vec{C} = 100(because (\vec{C} - \vec{F})^\top \vec{C} = 0)\\
-			(\vec{C} - \vec{F})^\top \vec{C} = \norm{\vec{C}}^2 - \vec{F}^\top \vec{C} = 100\\
+			\vec{A} = r\myvec{\cos{\theta}\\\sin{\theta}} = 12.8\myvec{\cos{38.68}\\\sin{38.68}}\\
+			\implies \vec{A} = \myvec{10\\8} \\
 		\end{align}
-So, $\vec{F}^\top$ $\vec{C} = 156$, which is \\
+	\item \textbf{To find out the co-ordinates of B :}\\
+		From parallelogram law of vectors, $\vec{B}$ can be expressed as the sum of $\vec{A}$ and $\vec{C}$.So, it can be written as,\\
 		\begin{align}
-			\vec{F}^\top\myvec{16\\0} = 156\\
-			\vec{F} e_1 = \frac{156}{16}\\
-			F_x = 9.75\\
+			\vec{B} = \vec{A} + \vec{C}\\
+			\vec{B} = \myvec{10\\8} + \myvec{16\\0}\\
+			\vec{B} = \myvec{26\\8}\\
 		\end{align}
-Based on above equations, $\vec{F}^\top \vec{F} = \vec{F}^\top \vec{C}$.So, it can be written as : \\
+	\item \textbf{To find out the co-ordinates of E :}\\
+		Let us assume that the $\norm{\vec{D} - \vec{E}} = \vec{d}$.As, $\vec{E}$ lies on x-axis it can be written in the form of $de_1$.So, the co-ordinates can be found out in the following way : \\
 		\begin{align}
-			\vec{F}^\top \vec{F} = 156\\
-			\implies (\vec{F}^\top e_1)^2 + (\vec{F}^\top e_2)^2 = 156\\
-			\implies F_x^2 + F_y^2 = 156 \\
-			F_y^2 = 156 - (9.75)^2\\
-			\implies F_y = 7.806\\
+			from \triangle{DAE},\\
+			\cos{\theta} = \frac{\vec{d}}{\vec{r}}\\
+			\vec{d} = \vec{r}\cos{\theta}\\
+			\implies (12.8)\cos{38.68} \\
+			\implies \vec{d} = 10\\
 		\end{align}
-The co-ordinates of F are (9.75,7.806).
-\item \textbf{To find out the co-ordinates of A :}\\
-	The length of AE gives the y co-ordinate of A,which is 8.By substituting in the below equation we can get the x co-ordinate of A :\\
-		\begin{align}
-			(\vec{C} - \vec{F})^\top \vec{A} = 0\\
-			\myvec{6.25&-7.806}\myvec{x\\8} = 0\\
-			(6.25)x = 62.5\\
-			\implies x = 10.
-		\end{align}
-The co-ordinates of A are (10,8).
-\item \textbf{To find out the co-ordinates of B :}\\
-	As B lies on the same horizontal line as that of A,the y co-ordinate of B is 8.In order to find out the x co-ordinate of B:\\
-		\begin{align}
-			As \norm{\vec{B} - \vec{A}} = 16\\
-			B_x = A_x + 16\\
-			B_x = 10 + 16 = 26\\
-		\end{align}
-		So, the co-ordinates of B are (26,8).
+		 $\vec{E}$ = $de_1$ = (10)$\myvec{1\\0}$ = $\myvec{10\\0}$.\\
+	 \item \textbf{To find out the co-ordinates of F :}\\
+		 As point $\vec{F}$ divides $\vec{AD}$ in the ratio 39 : 1.The co-ordinates of $\vec{F}$ can be found out in the following way : \\
+		 \begin{align}
+			 \vec{F} = \frac{k\vec{A} + \vec{D}}{k + 1}\\
+			 \vec{F} = \frac{(39)\myvec{10\\8} + \myvec{0\\0}}{40}\\
+			 \vec{F} = \frac{1}{40}\myvec{390\\312}\\
+			 \vec{F} = \myvec{9.75\\7.8}\\
+		 \end{align}
 \end{enumerate}
-\textbf{Solution}\\
-It is given that the length of $AB = 16cm$.So,\\
-\begin{align}
-	\norm{\vec{B} - \vec{A}} = 16cm \\
-\end{align}
-As the figure above is a parallelogram,\\
-\begin{align}
-	\norm{\vec{B} - \vec{A}} = \norm{\vec{C} - \vec{D}} = 16cm
-	\label{eq:3}\\
-\end{align}
-\vspace{5mm}
-In order to find \angle{DCF},\\
-\begin{align}
-	\text{ Let }\theta_2 = \angle{FCD}\\
-\vec{n_1} = &\vec{C} - \vec{F} = \myvec{6.25\\-7.806}, \vec{n_2} = \vec{C} - \vec{D} = \myvec{16\\0} \\
-\theta_2 = &\cos^{-1}\frac{\vec{n_1}^\top\vec{n_2}}{\norm{\vec{n_1}}\norm{\vec{n_2}}} \\
-	\implies\theta_2 = &\cos^{-1}\frac{\myvec{6.25&-7.806}\myvec{16\\0}}{(10)(16)} = 51.32\degree
-\end{align}
-As the sum of interal angles of a triangle are $180\degree$,from $\triangle{DFC}$\\
-\begin{align}
-	\angle{CFD} + \angle{FCD} + \angle{D} = 180\degree\\
-	\angle{D} = 180\degree - (\angle{CFD} + \angle{FCD})\\
-	\angle{D} = 180\degree - 141.32\degree \\
-	\angle{D} = 38.68\degree
-	\label{eq:4}\\
-\end{align}
-The area of parallelogram is calculated using the below formula\\
-\begin{align}
-	Area = (base)*(height)\\
-\end{align}
-For the above problem this can be written as,
-\begin{align}
-	Area = \norm{\vec{A} - \vec{E}} \norm{\vec{B} - \vec{A}}\\
-	\implies (8) (16) = 128
-	\label{eq:5}\\
-\end{align}
-The area of parallelogram can also be found out using cross product of two vectors,for the above problem it can be written as;
-\begin{align}
-	Area of parallelogram ABCD = \vec{DC} \times \vec{AD}\\
-	\vec{DC} \times \vec{AD} = \norm{\vec{D} - \vec{C}} \norm{\vec{D} - \vec{A}} \sin{D}
-	\label{eq:6}\\
-\end{align}
-From \ref{eq:3} and \ref{eq:6}\\
-\begin{align}
-	\norm{\vec{D} - \vec{A}} (16) \sin{38.68} = 128\\
-	\norm{\vec{D} - \vec{A}} (16) (\frac{5}{8}) = 128\\
-	\norm{\vec{D} - \vec{A}} = \frac{64}{5}\\
-	\norm{\vec{D} - \vec{A}} = 12.8cm\\
-\end{align}
-Therefore,$|\hspace{0.1cm}$\textbf{$\overrightarrow{\vec{AD}}\hspace{0.1cm} |$ = 12.8 cm}\\
+		 The length of $\vec{D} - \vec{A}$ was found out in the above process and it is $\norm{\vec{AD}} = \vec{r} = 12.8cm$.
 \end{document}
-
-
-
-
