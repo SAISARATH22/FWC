@@ -41,19 +41,18 @@ AB=16
 AE=8
 CF=10
 CD=AB
-
-m = math.sqrt((CF*CF)/(AB*AB-CF*CF))
-
+theta = np.pi/4.65
+AD=AE/math.sin(theta)
 
 D = np.array([0,0])
 C = np.array([CD,0])
 #theta1 = np.pi*2/7
 #d1=2.5
 #F = d1*np.array(([np.cos(theta1),np.sin(theta1)]))
-A = np.array([AE/m,AE])
-B = np.array([(AE/m) + AB ,AE])
-E = np.array([AE/m,0])
-F = np.array([(A[0]+D[0])/2,(A[1]+D[1])/2])
+A = np.array([AD*math.cos(theta),AD*math.sin(theta)])
+B = np.array([A[0]+C[0],A[1]+C[1]])
+E = np.array([AD*math.cos(theta),0])
+F = np.array([(39*A[0]+D[0])/40,(39*A[1]+D[1])/40])
 
 
 
