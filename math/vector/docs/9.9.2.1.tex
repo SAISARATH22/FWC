@@ -48,21 +48,17 @@ Following table shows the symbols and it's corresponding descriptions :\\
 	\caption{Symbols and Corresponding Vectors}
 	\label{tab:table3}
 \end{table}\\
-Rest of the point co-ordinates are derived in the following way : \\
-\begin{align}
-	\vec{C} = ce_1,\vec{A} = r\myvec{\cos{\theta}\\\sin{\theta}},\vec{B} = \vec{A} + \vec{C},\vec{E} = de_1,\vec{F} = \frac{k\vec{A} + \vec{D}}{k + 1}
-\end{align}
+The point co-ordinates are derived in the following way : \\
 \begin{enumerate}
 	\item \textbf{To derive the co-ordinates of C :}\\
-		As mentioned in the table3, $\norm{\vec{D} - \vec{C}} = c$.In the above parallelogram it is given that $\norm{\vec{B} - \vec{A}} = 16cm$.According to the properties of a parallelogram the parallel sides are equal in length.So, it can be said that : \\
+		As mentioned in the \ref{tab:table3}, $\norm{\vec{D} - \vec{C}} = c$.In the above parallelogram it is given that $\norm{\vec{B} - \vec{A}} = 16cm$.According to the properties of a parallelogram the parallel sides are equal in length.So, it can be said that : \\
 		\begin{align}
-			\norm{\vec{B} - \vec{A}} = \norm{\vec{D} - \vec{C}} = 16 = c\\
+			\norm{\vec{B} - \vec{A}} = \norm{\vec{D} - \vec{C}} = c\\
 		\end{align}
 As point $\vec{C}$ lies on x axis, it can be expressed in the following way :\\
 		\begin{align}
-			\vec{C} = ce_1\\
-			\implies (16)\myvec{1\\0}\\
-			\vec{C} = \myvec{16\\0}\\
+			\vec{C} = c\vec{e_1}\\
+			\vec{C} = c\myvec{1\\0} = \myvec{c\\0}\\
 		\end{align}
 	\item \textbf{To derive the co-ordinates of A :}\\
 		A can be expressed in the form of $r\myvec{\cos{\theta}\\\sin{\theta}}$.In order to obtain r and $\theta$, the following can be done : \\
@@ -72,50 +68,97 @@ As point $\vec{C}$ lies on x axis, it can be expressed in the following way :\\
 		\begin{align}
 			from \triangle{CFD},\\
 			\sin{\theta} = \frac{a}{c}\\
-			\implies \sin{\theta} = \frac{10}{16}\\
-			\implies \sin^{-1}{\frac{10}{16}} = 38.68\degree\\
+			\implies \theta = \sin^{-1}{\frac{a}{c}} \\
 		\end{align}
 	\item \textbf{To find out r :}\\
-		As mentioned in table3, $\norm{\vec{D} - \vec{A}} = r$ and $\norm{\vec{E} - \vec{A}} = b$.In order to find out $r$,
+		As mentioned in \ref{tab:table3}, $\norm{\vec{D} - \vec{A}} = r$ and $\norm{\vec{E} - \vec{A}} = b$.In order to find out $r$,
 		\begin{align}
 			from \triangle{ADE},\\
 			\sin{\theta} = \frac{b}{r}\\
 			r = \frac{b}{\sin{\theta}}\\
-			r = \frac{8}{\sin{\theta}}\\
-			\implies \frac{8}{\frac{5}{8}}\\
-			r = 12.8\\
 		\end{align}
 		So, the co-ordinates of $\vec{A}$ can be written as :\\
 		\begin{align}
-			\vec{A} = r\myvec{\cos{\theta}\\\sin{\theta}} = 12.8\myvec{\cos{38.68}\\\sin{38.68}}\\
-			\implies \vec{A} = \myvec{10\\8} \\
+			\vec{A} = \frac{b}{\sin{\theta}}\myvec{\cos{\theta}\\\sin{\theta}}\\
+			\vec{A} = \myvec{b\cot{\theta}\\b}\\
 		\end{align}
 		\end{enumerate}
-	\item \textbf{To find out the co-ordinates of B :}\\
+	\item \textbf{To derive the co-ordinates of B :}\\
 		From parallelogram law of vectors, $\vec{B}$ can be expressed as the sum of $\vec{A}$ and $\vec{C}$.So, it can be written as,\\
 		\begin{align}
 			\vec{B} = \vec{A} + \vec{C}\\
-			\vec{B} = \myvec{10\\8} + \myvec{16\\0}\\
-			\vec{B} = \myvec{26\\8}\\
 		\end{align}
-	\item \textbf{To find out the co-ordinates of E :}\\
+	\item \textbf{To derive the co-ordinates of E :}\\
 		As mentioned in the table3, $\norm{\vec{D} - \vec{E}} = d$.As, $\vec{E}$ lies on x-axis it can be written in the form of $de_1$.So, the co-ordinates can be found out in the following way : \\
 		\begin{align}
 			from \triangle{DAE},\\
 			\cos{\theta} = \frac{d}{r}\\
 			d = r\cos{\theta}\\
-			\implies (12.8)\cos{38.68} \\
-			\implies d = 10\\
 		\end{align}
-		 $\vec{E}$ = $de_1$ = (10)$\myvec{1\\0}$ = $\myvec{10\\0}$.\\
-	 \item \textbf{To find out the co-ordinates of F :}\\
-		 As point $\vec{F}$ divides $\vec{AD}$ in the ratio 39 : 1.The co-ordinates of $\vec{F}$ can be found out in the following way : \\
+		 $\vec{E}$ = $d\vec{e_1}$ = r$\cos{\theta}\myvec{1\\0}$ = $\myvec{r\cos{\theta}\\0}$.\\
+	 \item \textbf{To derive the co-ordinates of F :}\\
+		 As point $\vec{F}$ divides $\vec{AD}$ in the ratio k : 1.The co-ordinates of $\vec{F}$ can be found out in the following way : \\
 		 \begin{align}
 			 \vec{F} = \frac{k\vec{A} + \vec{D}}{k + 1}\\
-			 \vec{F} = \frac{(39)\myvec{10\\8} + \myvec{0\\0}}{40}\\
-			 \vec{F} = \frac{1}{40}\myvec{390\\312}\\
-			 \vec{F} = \myvec{9.75\\7.8}\\
 		 \end{align}
 \end{enumerate}
-		 The length of $\vec{D} - \vec{A}$ was found out in the above process and it is $\norm{\vec{AD}} = \vec{r} = 12.8cm$.
+\textbf{Finding the co-ordinates of the above parallelogram:}\\
+\begin{enumerate}
+	\item \textbf{Co-ordinates of $\vec{C}$:}\\
+		As c = $\norm{\vec{D} - \vec{C}} = 16$, the co-ordinates of $\vec{C}$ are:
+		\begin{align}
+			\vec{C} = \myvec{c\\0} = \myvec{16\\0}\\
+		\end{align}
+So, the co-ordinates of $\vec{C}$ are $\myvec{16\\0}$.
+\item \textbf{Co-ordinates of $\vec{A}$:}\\
+	\begin{enumerate}
+		\item \textbf{Finding $\theta$:}\\
+			\begin{align}
+				\theta = \sin^{-1}\frac{a}{c}\\
+				\theta = \sin^{-1}\frac{10}{16}\\
+				\theta = 38.68\degree\\
+			\end{align}
+	\end{enumerate}
+From the above derivations, we got that:\\
+			\begin{align}
+				\vec{A} = \myvec{b\cot{\theta}\\b}\\
+				\implies \myvec{8\cot{38.68}\\8}\\
+				\vec{A} = \myvec{10\\8}\\
+			\end{align}
+so, the co-ordinates of $\vec{A}$ are $\myvec{10\\8}$.
+\item \textbf{Co-ordinates of $\vec{B}$:}\\
+	From above derivation, we got that $\vec{B} = \vec{A} + \vec{C}$.Then, $\vec{C}$ is:\\
+		\begin{align}
+			\vec{B} = \myvec{10\\8} + \myvec{16\\0}\\
+			\vec{B} = \myvec{26\\8}\\
+		\end{align}
+So, the co-ordinates of $\vec{B}$ are $\myvec{26\\8}$.
+\item \textbf{Co-ordinates of $\vec{E}$:}\\
+	\begin{enumerate}
+		\item \textbf{Finding r:}\\
+From above derivation, r can be found out in the following way:\\
+			\begin{align}
+				r = \frac{b}{\sin{\theta}}\\
+				r = \frac{8}{\sin{38.68}}\\
+				r = 12.8cm\\
+			\end{align}
+	\end{enumerate}
+		The co-ordinates of $\vec{E}$ are:
+		\begin{align}
+			\vec{E} = \myvec{r\cos{\theta}\\0}\\
+			\implies \myvec{(12.8)\cos{38.68}\\0}\\
+			\vec{E} = \myvec{10\\0}\\
+		\end{align}
+So, the co-ordinates for $\vec{E}$ are $\myvec{10\\0}$.
+\item \textbf{Co-ordinates for $\vec{F}$:}\\
+	$\vec{F}$ divides $\vec{AD}$ in the ratio 39 : 1.So, the co-ordinates of $\vec{F}$ are:
+		\begin{align}
+			\vec{F} = \frac{k\vec{A} + \vec{D}}{k + 1}\\
+			\implies \frac{(39)\myvec{10\\8} + \myvec{0\\0}}{39 + 1}\\
+			\implies \frac{\myvec{390\\312}}{40}\\
+			\vec{F} = \myvec{9.75\\7.8}
+		\end{align}
+So, the co-ordinates of $\vec{F}$ are $\myvec{9.75\\7.8}$.
+\end{enumerate}
+		 The length of $\norm{\vec{D} - \vec{A}}$ was found out in the above process and it is r = 12.8cm.
 \end{document}
