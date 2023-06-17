@@ -41,38 +41,56 @@ Table below has the given input co-ordinates of the parallelogram :\\
 	\caption{Co-ordinates}
 	\label{tab:table2}
 \end{table}\\
+Following table shows the symbols and it's corresponding descriptions :\\
+\begin{table}[h]
+	\centering
+	\input{tables/table3.tex}
+	\caption{Symbols and Corresponding Vectors}
+	\label{tab:table3}
+\end{table}\\
 Rest of the point co-ordinates are derived in the following way : \\
+\begin{align}
+	\vec{C} = ce_1,\vec{A} = r\myvec{\cos{\theta}\\\sin{\theta}},\vec{B} = \vec{A} + \vec{C},\vec{E} = de_1,\vec{F} = \frac{k\vec{A} + \vec{D}}{k + 1}
+\end{align}
 \begin{enumerate}
 	\item \textbf{To derive the co-ordinates of C :}\\
-		Let us assume that $\norm{\vec{D} - \vec{C}} = \vec{c}$.As it is given that $\norm{\vec{D} - \vec{C}} = 16$ and as point C lies on x axis, it can be expressed in the following way : \\
+		As mentioned in the table3, $\norm{\vec{D} - \vec{C}} = c$.In the above parallelogram it is given that $\norm{\vec{B} - \vec{A}} = 16cm$.According to the properties of a parallelogram the parallel sides are equal in length.So, it can be said that : \\
 		\begin{align}
-			\vec{C} = \vec{c}e_1\\
+			\norm{\vec{B} - \vec{A}} = \norm{\vec{D} - \vec{C}} = 16 = c\\
+		\end{align}
+As point $\vec{C}$ lies on x axis, it can be expressed in the following way :\\
+		\begin{align}
+			\vec{C} = ce_1\\
 			\implies (16)\myvec{1\\0}\\
 			\vec{C} = \myvec{16\\0}\\
 		\end{align}
 	\item \textbf{To derive the co-ordinates of A :}\\
 		A can be expressed in the form of $r\myvec{\cos{\theta}\\\sin{\theta}}$.In order to obtain r and $\theta$, the following can be done : \\
-		To find out $\theta$,let us assume that $\norm{\vec{C} - \vec{F}} = \vec{a}$		
+		\begin{enumerate}
+			\item \textbf{To find out $\theta$ :}\\
+		To find out $\theta$,let us assume that $\norm{\vec{C} - \vec{F}} = a$		
 		\begin{align}
 			from \triangle{CFD},\\
-			\sin{\theta} = \frac{\vec{a}}{\vec{c}}\\
+			\sin{\theta} = \frac{a}{c}\\
 			\implies \sin{\theta} = \frac{10}{16}\\
 			\implies \sin^{-1}{\frac{10}{16}} = 38.68\degree\\
 		\end{align}
-		Let us consider $\norm{\vec{D} - \vec{A}} = \vec{r}$ and $\norm{\vec{E} - \vec{A}} = \vec{b}$.In order to find out $\vec{r}$,
+	\item \textbf{To find out r :}\\
+		As mentioned in table3, $\norm{\vec{D} - \vec{A}} = r$ and $\norm{\vec{E} - \vec{A}} = b$.In order to find out $r$,
 		\begin{align}
 			from \triangle{ADE},\\
-			\sin{\theta} = \frac{\vec{b}}{\vec{r}}\\
-			\vec{r} = \frac{\vec{b}}{\sin{\theta}}\\
-			\vec{r} = \frac{8}{\sin{\theta}}\\
+			\sin{\theta} = \frac{b}{r}\\
+			r = \frac{b}{\sin{\theta}}\\
+			r = \frac{8}{\sin{\theta}}\\
 			\implies \frac{8}{\frac{5}{8}}\\
-			\vec{r} = 12.8\\
+			r = 12.8\\
 		\end{align}
 		So, the co-ordinates of $\vec{A}$ can be written as :\\
 		\begin{align}
 			\vec{A} = r\myvec{\cos{\theta}\\\sin{\theta}} = 12.8\myvec{\cos{38.68}\\\sin{38.68}}\\
 			\implies \vec{A} = \myvec{10\\8} \\
 		\end{align}
+		\end{enumerate}
 	\item \textbf{To find out the co-ordinates of B :}\\
 		From parallelogram law of vectors, $\vec{B}$ can be expressed as the sum of $\vec{A}$ and $\vec{C}$.So, it can be written as,\\
 		\begin{align}
@@ -81,13 +99,13 @@ Rest of the point co-ordinates are derived in the following way : \\
 			\vec{B} = \myvec{26\\8}\\
 		\end{align}
 	\item \textbf{To find out the co-ordinates of E :}\\
-		Let us assume that the $\norm{\vec{D} - \vec{E}} = \vec{d}$.As, $\vec{E}$ lies on x-axis it can be written in the form of $de_1$.So, the co-ordinates can be found out in the following way : \\
+		As mentioned in the table3, $\norm{\vec{D} - \vec{E}} = d$.As, $\vec{E}$ lies on x-axis it can be written in the form of $de_1$.So, the co-ordinates can be found out in the following way : \\
 		\begin{align}
 			from \triangle{DAE},\\
-			\cos{\theta} = \frac{\vec{d}}{\vec{r}}\\
-			\vec{d} = \vec{r}\cos{\theta}\\
+			\cos{\theta} = \frac{d}{r}\\
+			d = r\cos{\theta}\\
 			\implies (12.8)\cos{38.68} \\
-			\implies \vec{d} = 10\\
+			\implies d = 10\\
 		\end{align}
 		 $\vec{E}$ = $de_1$ = (10)$\myvec{1\\0}$ = $\myvec{10\\0}$.\\
 	 \item \textbf{To find out the co-ordinates of F :}\\
