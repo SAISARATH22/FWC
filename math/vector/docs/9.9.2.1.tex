@@ -51,11 +51,11 @@ Following table are the unknown lengths and angles and their symbols: \\
 The point co-ordinates are derived in the following way : \\
 \begin{enumerate}
 	\item \textbf{To derive the co-ordinates of C :}\\
-		As mentioned in the \ref{tab:table3}, $\norm{\vec{D} - \vec{C}} = c$.In the above parallelogram it is given that $\norm{\vec{B} - \vec{A}} = 16cm$.According to the properties of a parallelogram the parallel sides are equal in length.So, it can be said that : \\
+		As mentioned in the \ref{tab:table3}, $\vec{DC} = c$.In the above parallelogram it is given that $\vec{AB} = 16cm$.According to the properties of a parallelogram the parallel sides are equal in length.So, it can be said that : \\
 		\begin{align}
-			\norm{\vec{B} - \vec{A}} = \norm{\vec{D} - \vec{C}} = c\\
+			 \vec{AB} = \vec{DC} = c\\
 		\end{align}
-As point $\vec{C}$ lies on x axis, it can be expressed in the following way :\\
+So, point $\vec{C}$ can be expressed in the following way :\\
 		\begin{align}
 			\vec{C} = c\vec{e_1}\\
 			\vec{C} = c\myvec{1\\0} = \myvec{c\\0}\\
@@ -64,20 +64,18 @@ As point $\vec{C}$ lies on x axis, it can be expressed in the following way :\\
 		A can be expressed in the form of $r\myvec{\cos{\theta}\\\sin{\theta}}$.In order to obtain r and $\theta$, the following can be done : \\
 		\begin{enumerate}
 			\item \textbf{To find out $\theta$ :}\\
-		To find out $\theta$,let us assume that $\norm{\vec{C} - \vec{F}} = a$		
+To find out $\theta$,let us assume that $\vec{CF} = a$, from $\triangle{CFD}$ :\\
 		\begin{align}
-			from \triangle{CFD},\\
 			\sin{\theta} = \frac{a}{c}\\
 			\implies \theta = \sin^{-1}{\frac{a}{c}} \\
 		\end{align}
 	\item \textbf{To find out r :}\\
-		As mentioned in \ref{tab:table3}, $\norm{\vec{D} - \vec{A}} = r$ and $\norm{\vec{E} - \vec{A}} = b$.In order to find out $r$,
+		As mentioned in \ref{tab:table3}, $\vec{AD} = r$ and $\vec{AE} = b$.In order to find out $r$, from $\triangle{ADE}$:\\
 		\begin{align}
-			from \triangle{ADE},\\
 			\sin{\theta} = \frac{b}{r}\\
 			r = \frac{b}{\sin{\theta}}\\
 		\end{align}
-		So, the co-ordinates of $\vec{A}$ can be written as :\\
+So, the co-ordinates of $\vec{A}$ can be written as :\\
 		\begin{align}
 			\vec{A} = \frac{b}{\sin{\theta}}\myvec{\cos{\theta}\\\sin{\theta}}\\
 			\vec{A} = \myvec{b\cot{\theta}\\b}\\
@@ -89,9 +87,8 @@ As point $\vec{C}$ lies on x axis, it can be expressed in the following way :\\
 			\vec{B} = \vec{A} + \vec{C}\\
 		\end{align}
 	\item \textbf{To derive the co-ordinates of E :}\\
-		As mentioned in the table3, $\norm{\vec{D} - \vec{E}} = d$.As, $\vec{E}$ lies on x-axis it can be written in the form of $de_1$.So, the co-ordinates can be found out in the following way : \\
+		As mentioned in the \ref{tab:table3}, $\vec{DE} = d$.So, $\vec{E}$ can be written in the form of $de_1$.So, the co-ordinates can be found out in the following way, from $\triangle{DAE}$ :\\
 		\begin{align}
-			from \triangle{DAE},\\
 			\cos{\theta} = \frac{d}{r}\\
 			d = r\cos{\theta}\\
 		\end{align}
@@ -120,7 +117,7 @@ The following table displays the point co-ordinates in terms of known and derive
 \textbf{Finding the co-ordinates of the above parallelogram:}\\
 \begin{enumerate}
 	\item \textbf{Co-ordinates of $\vec{C}$:}\\
-		As c = $\norm{\vec{D} - \vec{C}} = 16$, the co-ordinates of $\vec{C}$ are:
+		As c = $\vec{DC} = 16$, the co-ordinates of $\vec{C}$ are:
 		\begin{align}
 			\vec{C} = \myvec{c\\0} = \myvec{16\\0}\\
 		\end{align}
@@ -182,5 +179,5 @@ The following table displays the final co-ordinates of the vertices of the paral
 	\caption{Final co-ordinates of the parallelogram}
 	\label{tab:table6}
 \end{table}\\
-The length of $\norm{\vec{D} - \vec{A}}$ was found out in the above process and it is r = 12.8cm.
+The length of $\vec{AD}$ was found out in the above process and it is r = 12.8cm.
 \end{document}
