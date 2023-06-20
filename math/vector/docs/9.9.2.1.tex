@@ -24,160 +24,132 @@ Q1. In the figure given below, $ABCD$ is a parallelogram, $AE \perp DC$ and $CF 
   \includegraphics[width=\columnwidth]{fig1.png}
  \end{center}
  \caption{Parallelogram ABCD}
- \label{fig:Fig}
+ \label{fig:Fig1}
 \end{figure}\\
 \pagebreak
-The following table consists of given input parameters of the above parallelogram ABCD :\\
+The following table displays the given input parameters :\\
 \begin{table}[h]
-\centering
+	\centering
 	\input{tables/table1.tex}
-	\caption{Parameters}
+	\caption{Input Parameters}
 	\label{tab:table1}
 \end{table}\\
-Table below has the given input co-ordinates of the parallelogram :\\
+The lengths and angles which are to be found out are displayed in the table below along with their symbols :\\
 \begin{table}[h]
 	\centering
 	\input{tables/table2.tex}
-	\caption{Co-ordinates}
+	\caption{Unknown Parameters}
 	\label{tab:table2}
 \end{table}\\
-Following table are the unknown lengths and angles and their symbols: \\
+The input co-ordinates of the above parallelogram is $\vec{D}$ which is at the origin.The rest of the point co-ordinates can be derived based on this assumption in the following way which is shown in the table below :\\
 \begin{table}[h]
 	\centering
 	\input{tables/table3.tex}
-	\caption{Symbols and Corresponding Vectors}
+	\caption{Unknown Co-ordinates}
 	\label{tab:table3}
 \end{table}\\
-The point co-ordinates are derived in the following way : \\
+\textbf{Deriving the Unknown lengths and angles in terms of known and derived parameters :}\\
 \begin{enumerate}
-	\item \textbf{To derive the co-ordinates of C :}\\
-		As mentioned in the \ref{tab:table3}, $\vec{DC} = c$.In the above parallelogram it is given that $\vec{AB} = 16cm$.According to the properties of a parallelogram the parallel sides are equal in length.So, it can be said that : \\
+	\item \textbf{Deriving c:}\\
+		From Figure\ref{fig:Fig1}, $c$ is  parallel to $l$(AB paralle to CD).So,
 		\begin{align}
-			 \vec{AB} = \vec{DC} = c\\
+			c = l\\
+			\label{eq:1}
 		\end{align}
-So, point $\vec{C}$ can be expressed in the following way :\\
+	\item \textbf{Deriving d:}\\
+		From $\triangle{ADE}$,\\
 		\begin{align}
-			\vec{C} = c\vec{e_1}\\
-			\vec{C} = c\myvec{1\\0} = \myvec{c\\0}\\
+			\cos{\theta} = \frac{DE}{AD} = \frac{d}{r}\\
+			\implies d = r\cos{\theta}\\
+			\label{eq:2}\\
 		\end{align}
-	\item \textbf{To derive the co-ordinates of A :}\\
-		A can be expressed in the form of $r\myvec{\cos{\theta}\\\sin{\theta}}$.In order to obtain r and $\theta$, the following can be done : \\
-		\begin{enumerate}
-			\item \textbf{To find out $\theta$ :}\\
-To find out $\theta$,let us assume that $\vec{CF} = a$, from $\triangle{CFD}$ :\\
+	\item \textbf{Deriving r:}\\
+		From $\triangle{ADE}$,\\
 		\begin{align}
-			\sin{\theta} = \frac{a}{c}\\
-			\implies \theta = \sin^{-1}{\frac{a}{c}} \\
+			\sin{\theta} = \frac{AE}{AD} = \frac{b}{r}\\
+			\implies r = \frac{b}{\sin{\theta}}\\
+			\label{eq:3}\\
 		\end{align}
-	\item \textbf{To find out r :}\\
-		As mentioned in \ref{tab:table3}, $\vec{AD} = r$ and $\vec{AE} = b$.In order to find out $r$, from $\triangle{ADE}$:\\
+	\item \textbf{Deriving f:}\\
+		From $\triangle{DFC}$,\\
 		\begin{align}
-			\sin{\theta} = \frac{b}{r}\\
-			r = \frac{b}{\sin{\theta}}\\
+			\cos{\theta} = \frac{DF}{DC} = \frac{f}{c}\\
+			\implies f = c\cos{\theta}\\
+			\label{eq:4}\\
 		\end{align}
-So, the co-ordinates of $\vec{A}$ can be written as :\\
+	\item \textbf{Finding $\theta$:}\\
+		From $\triangle{DFC}$,\\
 		\begin{align}
-			\vec{A} = \frac{b}{\sin{\theta}}\myvec{\cos{\theta}\\\sin{\theta}}\\
-			\vec{A} = \myvec{b\cot{\theta}\\b}\\
+			\sin{\theta} = \frac{CF}{CD} = \frac{a}{c}\\
+			\label{eq:5}\\
+			\implies \theta = \sin^{-1}\frac{a}{c}\\
+			\label{eq:6}\\
 		\end{align}
-		\end{enumerate}
-	\item \textbf{To derive the co-ordinates of B :}\\
-		From parallelogram law of vectors, $\vec{B}$ can be expressed as the sum of $\vec{A}$ and $\vec{C}$.So, it can be written as,\\
-		\begin{align}
-			\vec{B} = \vec{A} + \vec{C}\\
-		\end{align}
-	\item \textbf{To derive the co-ordinates of E :}\\
-		As mentioned in the \ref{tab:table3}, $\vec{DE} = d$.So, $\vec{E}$ can be written in the form of $de_1$.So, the co-ordinates can be found out in the following way, from $\triangle{DAE}$ :\\
-		\begin{align}
-			\cos{\theta} = \frac{d}{r}\\
-			d = r\cos{\theta}\\
-		\end{align}
-		 $\vec{E}$ = $d\vec{e_1}$ = r$\cos{\theta}\myvec{1\\0}$ = $\myvec{r\cos{\theta}\\0}$.\\
-	 \item \textbf{To derive the co-ordinates of F :}\\
-		 As point $\vec{F}$ divides $\vec{AD}$ in the ratio k : 1.The co-ordinates of $\vec{F}$ can be found out in the following way : \\
-		 \begin{align}
-			 \vec{F} = \frac{k\vec{A} + \vec{D}}{k + 1}\\
-		 \end{align}
 \end{enumerate}
-The following table displays the unknown lengths and angles which were derived from the given quantities :\\
+From \ref{eq:1},\ref{eq:2},\ref{eq:3},\ref{eq:4} and \ref{eq:6}, table\ref{tab:table2} can be modified as :\\
 \begin{table}[h]
 	\centering
 	\input{tables/table4.tex}
-	\caption{Co-ordinates in terms of given and derived lengths and angles}
+	\caption{Unknown parameters in terms of known and derived parameters}
 	\label{tab:table4}
 \end{table}\\
-\pagebreak
-The following table displays the point co-ordinates in terms of known and derived quantities:\\
+\textbf{Deriving co-ordinates in terms of known and derived parameters:}\\
+Based on table\ref{tab:table4}, table\ref{tab:table3} can be modified as follows :\\
 \begin{table}[h]
 	\centering
 	\input{tables/table5.tex}
-	\caption{Co-ordinates in terms of known and derived quantities}
+	\caption{Co-ordinates in terms of known and derived co-ordinates}
 	\label{tab:table5}
 \end{table}\\
-\textbf{Finding the co-ordinates of the above parallelogram:}\\
+\textbf{Finding Co-ordinates:}\\
 \begin{enumerate}
-	\item \textbf{Co-ordinates of $\vec{C}$:}\\
-		As c = $\vec{DC} = 16$, the co-ordinates of $\vec{C}$ are:
+	\item \textbf{Co-ordinates of A:}\\
+		From \ref{eq:6},the value of $\theta$ is :\\
 		\begin{align}
-			\vec{C} = \myvec{c\\0} = \myvec{16\\0}\\
+			\theta = \sin^{-1}\frac{a}{c} = \sin^{-1}\frac{10}{16} \\
+			\implies \theta = 38.68\degree\\
 		\end{align}
-So, the co-ordinates of $\vec{C}$ are $\myvec{16\\0}$.
-\item \textbf{Co-ordinates of $\vec{A}$:}\\
-	\begin{enumerate}
-		\item \textbf{Finding $\theta$:}\\
-			\begin{align}
-				\theta = \sin^{-1}\frac{a}{c}\\
-				\theta = \sin^{-1}\frac{10}{16}\\
-				\theta = 38.68\degree\\
+		So, co-ordinates of $\vec{A}$ can be derived from table\ref{tab:table5} and they are :\\
+		\begin{align}
+			\vec{A} = \frac{8}{\sin{38.68}}\myvec{\cos{38.68}\\\sin{38.68}}\\
+			\implies \vec{A} = \myvec{10\\8}\\
 			\end{align}
-	\end{enumerate}
-From the above derivations, we got that:\\
-			\begin{align}
-				\vec{A} = \myvec{b\cot{\theta}\\b}\\
-				\implies \myvec{8\cot{38.68}\\8}\\
-				\vec{A} = \myvec{10\\8}\\
-			\end{align}
-so, the co-ordinates of $\vec{A}$ are $\myvec{10\\8}$.
-\item \textbf{Co-ordinates of $\vec{B}$:}\\
-	From above derivation, we got that $\vec{B} = \vec{A} + \vec{C}$.Then, $\vec{C}$ is:\\
+	\item \textbf{Co-ordinates of B:}\\
+		From table\ref{tab:table5},co-ordinates of $\vec{B}$ are :\\
 		\begin{align}
 			\vec{B} = \myvec{10\\8} + \myvec{16\\0}\\
 			\vec{B} = \myvec{26\\8}\\
 		\end{align}
-So, the co-ordinates of $\vec{B}$ are $\myvec{26\\8}$.
-\item \textbf{Co-ordinates of $\vec{E}$:}\\
-	\begin{enumerate}
-		\item \textbf{Finding r:}\\
-From above derivation, r can be found out in the following way:\\
-			\begin{align}
-				r = \frac{b}{\sin{\theta}}\\
-				r = \frac{8}{\sin{38.68}}\\
-				r = 12.8cm\\
-			\end{align}
-	\end{enumerate}
-		The co-ordinates of $\vec{E}$ are:
+	\item \textbf{Co-ordinates of C are :}\\
+		From table\ref{tab:table5},co-ordinates of $\vec{C}$ are :\\
 		\begin{align}
-			\vec{E} = \myvec{r\cos{\theta}\\0}\\
-			\implies \myvec{(12.8)\cos{38.68}\\0}\\
-			\vec{E} = \myvec{10\\0}\\
+			\vec{C} = ce_1 = \myvec{c\\0}\\
+			\implies \vec{C} = \myvec{16\\0}\\
 		\end{align}
-So, the co-ordinates for $\vec{E}$ are $\myvec{10\\0}$.
-\item \textbf{Co-ordinates for $\vec{F}$:}\\
-	$\vec{F}$ divides $\vec{AD}$ in the ratio 39 : 1.So, the co-ordinates of $\vec{F}$ are:
+	\item \textbf{Co-ordinates of E :}\\
+		From \ref{eq:3}, the value of $r$ is :\\
 		\begin{align}
-			\vec{F} = \frac{k\vec{A} + \vec{D}}{k + 1}\\
-			\implies \frac{(39)\myvec{10\\8} + \myvec{0\\0}}{39 + 1}\\
-			\implies \frac{\myvec{390\\312}}{40}\\
-			\vec{F} = \myvec{9.75\\7.8}
+			r = \frac{8}{\sin{38.68}} = 12.8cm\\
+			\label{eq:7}
 		\end{align}
-So, the co-ordinates of $\vec{F}$ are $\myvec{9.75\\7.8}$.
+		From table\ref{tab:table5},co-ordinates of $\vec{E}$ are :\\
+		\begin{align}
+			\vec{E} = (12.8)\cos{38.68}\myvec{1\\0}\\
+			\implies \vec{E} = \myvec{10\\0}\\
+		\end{align}
+	\item \textbf{co-ordinates of F:}\\
+		From table\ref{tab:table5},co-ordinates of $\vec{F}$ are :\\
+		\begin{align}
+			\vec{F} = (16)\cos{38.68}\myvec{\cos{38.68}\\\sin{38.68}}\\
+			\implies \vec{F} = \myvec{9.75\\7.8}\\
+		\end{align}
 \end{enumerate}
-The following table displays the final co-ordinates of the vertices of the parallelogram :\\
+So, the final co-ordinates of the  parallelogram are displayed in the table below:\\
 \begin{table}[h]
 	\centering
 	\input{tables/table6.tex}
-	\caption{Final co-ordinates of the parallelogram}
-	\label{tab:table6}
+	\caption{Final Co-ordinates}
+	\label{tab:table7}
 \end{table}\\
-The length of $\vec{AD}$ was found out in the above process and it is r = 12.8cm.
+From \ref{eq:7}, we got the length of AD = r = 12.8cm.
 \end{document}
